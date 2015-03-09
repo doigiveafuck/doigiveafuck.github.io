@@ -1,1 +1,123 @@
-Hello
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Take your life in your own hands. This app may save your ass. Seriously.">
+    <meta property="og:url" content="http://zientarscy.pl/digaf/">
+    <meta property="og:image" content="http://zientarscy.pl/digaf/images/shareimg.jpg">
+    <meta property="og:title" content="Do I Give a Fuck?">
+    <meta property="og:description" content="Take your life in your own hands. This app may save your ass. Seriously.">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <title>Do I Give a Fuck?</title>
+    <link rel="stylesheet" href="css/app.css"><!--[if lte IE 7]>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/json2/20110223/json2.js"></script><![endif]--><!--[if lte IE 8]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+    <script>
+      window.brunch = window.brunch || {};
+      window.brunch['auto-reload'] = {
+        enabled: true
+      };
+    </script>
+    <script src="js/vendor.js"></script>
+    <script src="js/partials.js"></script>
+    <script src="js/app.js"></script>
+  </head>
+  <body ng-controller="AppCtrl">
+    <video id="bgvid" autoplay loop muted poster="images/digaf.jpg">
+      <source src="videos/digaf.webm" type="video/webm">
+      <source src="videos/digaf.mp4" type="video/mp4">
+    </video>
+    <div id="dots"></div><img id="shareimg" src="images/shareimg.jpg">
+    <div class="container-fluid">
+      <div class="row central-panel">
+        <div class="col-xs-6 text-right">
+          <p class="phone"></p>
+          <canvas id="phoneCanvas" width="121" height="172" ng-click="clicked()"></canvas>
+        </div>
+        <div class="col-xs-6 text-left buzz">
+          <canvas id="noCanvas" width="121" height="172"></canvas>
+          <canvas id="maskCanvas" width="121" height="172"></canvas>
+          <h1>A life-changing mobile app: </h1>
+          <h1><a href="#wtf">WTF?</a>|<a href="#whatIsIt">what is it?</a></h1>
+          <h1><a href="#campain">I love it!</a></h1>
+          <h1><a href="#"><img src="images/social-f.jpg"></a><a href="#"><img src="images/social-t.jpg"></a><a href="#"><img src="images/social-k.jpg"></a></h1>
+          <!-- h3 1844 don't-give-a-fucks given worldwide-->
+        </div>
+      </div>
+      <div id="wtf" class="row row-2">
+        <div class="container">
+          <h1>Join the revolution. Watch our promo video:</h1>
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/0tOTw38P4GE?rel=0" frameborder="0" allowfullscreen=""></iframe>
+          <h3 id="rationale">- In short -</h3>
+          <div class="col-xs-10 col-xs-offset-1">
+            <p>It's probably gonna be the most usefull app you ever encountered. With high probability it will once save your ass. Available for all modern iOS and Android devices.</p>
+            <div class="oses"></div>
+          </div>
+        </div>
+      </div>
+      <div id="whatIsIt" class="row row-2">
+        <div class="container">
+          <h3 id="rationale">- In detail -</h3>
+          <div class="col-xs-10 col-xs-offset-1">
+            <!--p Stop worrying about what do people think about you, if they like you or if they think you're cool. You don't need to listen to or follow any person, trend or fashion. It's time to think about yourself. There's only one life you have and It's you're choice how you live it, so don't give a fuck about all the things you don't feel like doing. Just sit back, relax and enjoy your life.-->
+            <p>Most of us struggle throughout our lives by giving too many fucks in situations where fucks do not deserve to be given. Have you ever wondered: what if we all have a limited number of fucks to give? How many times have you asked yourself:<i>To give a fuck, or not to give a fuck?</i></p>
+            <!--p With the help of the application we're about to create you will be able to remind yourself about what to do in all uncomfortable situations. You can also use it to express your feelings to others.-->
+            <p>We plan to create application that will give you the answer in three randomly selected ways. Each of them will be fun, interesting and cool. We don't intend to earn our first million on it - it will be available for free in Google Play and Apple Store.</p>
+          </div>
+        </div>
+      </div>
+      <div class="row row-2">
+        <div class="col-xs-10 col-xs-offset-1">
+          <p class="demo-phone"><img src="images/demo1.gif" width="121"></p>
+          <p class="demo-phone"><img src="images/demo2.gif" width="121"></p>
+          <p class="demo-phone"><img src="images/demo3.gif" width="121"></p>
+        </div>
+      </div>
+      <div class="row row-2">  
+        <div class="container"> 
+          <h3 id="rationale">- analog "Do I Give a Fuck?" -</h3>
+          <div class="col-xs-10 col-xs-offset-1">
+            <p>Don't have a phone? Want to share your feelings with some caveman? No problem! We have analog version for you as one of Kickstarter rewards.</p>
+            <p>Go ahead! Share it with your friend's friend, your grandma and that irritating cousin from village you never really liked.    </p>
+            <div class="visiting-cards"></div>
+            <p class="small">Printed in format of business card (2'' × 3.5'') will easily fit into your pocket.</p>
+          </div>
+        </div>
+      </div>
+      <div id="campain" class="row row-1">
+        <h1>You can make it happen:&nbsp;<a href>back our Kickstarter project</a></h1>
+        <p>(and check our rewards)</p>
+        <p>- or -</p>
+        <h1>help us spread the word:&nbsp;<a href="" target="_blank" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=http://zientarscy.pl/digaf/','Share on facebook','width=600,height=400')"><img src="images/social-f.jpg" width="40"></a>&nbsp;<a href="" target="_blank" onclick="window.open('https://twitter.com/home?status=Check%20this%20out:%20%20http://zientarscy.pl/digaf/','Share on facebook','width=600,height=400')"><img src="images/social-t.jpg" width="40"></a></h1>
+        <p>Thanks!</p>
+      </div>
+      <div class="row row-3">
+        <div class="container">
+          <h1>Authors:</h1>
+          <div class="col-xs-5 col-xs-offset-1">
+            <div class="avatar maciek"></div>
+            <h3>Maciek</h3>
+            <p>Social psychopath. The true reason for creating the app. The kind of guy you like but you don't really know why. Believes in UFO and human-hamster love.</p>
+            <p>Programming since hands grew out from his torso.</p>
+          </div>
+          <div class="col-xs-5">
+            <div class="avatar paulina"></div>
+            <h3>Paulina</h3>
+            <p>The rational part of the team. Has impressive skills in criticizing other's effort, but if something works it's probably down to her. Believes that pearl necklace is piece of jewelry.</p>
+            <p>Programming for money, knitting for pleasure.</p>
+          </div>
+        </div>
+      </div>
+      <div class="row row-1">
+        <p>Follow us on:&nbsp;<a href>Facebook</a> |&nbsp;<a href>Twitter</a></p>
+        <p>All questions and suggestions are warmly welcome:&nbsp;<a href>contact@do-i-give-a-fuck.com</a></p>
+        <hr>
+        <p>Description contains quotations from <a href="http://markmanson.net/not-giving-a-fuck#OBPa4c:Wd4o">"The subtle art of not givina a fuck"</a> blog post by <a href="http://markmanson.net/">Mark Manson</a></p>
+      </div>
+    </div>
+    <!--script(src='//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-534082452b86d020', async='async')-->
+  </body>
+</html>
